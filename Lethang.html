@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Thắng Media</title>
+    <style>
+        /* CSS cho toàn bộ trang */
+        body {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hiệu ứng Loading */
+        #loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #0d0d0d;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loading-text { font-size: 40px; font-weight: bold; color: #ff00ff; }
+        .loading-bar { width: 200px; height: 4px; background: #333; margin: 20px 0; border-radius: 2px; overflow: hidden; }
+        .loading-bar-inner { width: 0%; height: 100%; background: linear-gradient(90deg, #ffff00, #00ffff); transition: width 0.1s; }
+        .loading-sub { color: #666; letter-spacing: 4px; font-size: 12px; }
+
+        /* Phần nội dung chính (ẩn lúc đầu) */
+        #main-content { display: none; padding: 20px; max-width: 1200px; margin: auto; }
+
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo { font-weight: bold; font-size: 20px; color: #a855f7; }
+        .btn-contact { background: linear-gradient(to right, #ec4899, #8b5cf6); padding: 10px 20px; border-radius: 20px; color: white; text-decoration: none; font-weight: bold; }
+
+        /* Tiêu đề chính */
+        h1 { font-size: 40px; line-height: 1.2; margin-bottom: 10px; }
+        h1 span { display: block; }
+        .highlight { color: #00d2ff; }
+        
+        /* Các ô dịch vụ (Grid) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .service-card {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #333;
+        }
+        .service-card h3 { color: #fff; margin-top: 0; font-size: 18px; }
+        .service-card p { color: #aaa; font-size: 14px; line-height: 1.5; }
+        
+        /* Nút Call to Action */
+        .cta-section { text-align: center; margin: 40px 0; }
+        .btn-cta { background: linear-gradient(to right, #ec4899, #8b5cf6); border: none; color: white; padding: 15px 40px; border-radius: 30px; font-weight: bold; font-size: 18px; cursor: pointer; }
+        
+        /* Số liệu */
+        .stats { display: flex; justify-content: space-around; text-align: center; margin-top: 40px; border-top: 1px solid #222; padding-top: 30px; }
+        .stat-box h2 { color: #00d2ff; font-size: 30px; margin: 0; }
+        .stat-box p { color: #888; font-size: 12px; margin: 0; }
+    </style>
+</head>
+<body>
+
+    <!-- MÀN HÌNH LOADING -->
+    <div id="loading-screen">
+        <div class="loading-text">Loading...</div>
+        <div class="loading-bar">
+            <div class="loading-bar-inner" id="progress-bar"></div>
+        </div>
+        <div class="loading-sub">LÊ THẮNG MEDIA</div>
+    </div>
+
+    <!-- NỘI DUNG CHÍNH -->
+    <div id="main-content">
+        <header>
+            <div class="logo">Lê Thắng Media</div>
+            <a href="#" class="btn-contact">Nhận Tư Vấn</a>
+        </header>
+
+        <h1>
+            <span>HỆ SINH THÁI</span>
+            <span>DỊCH VỤ MẠNG XÃ HỘI</span>
+            <span class="highlight">TOÀN DIỆN</span>
+        </h1>
+
+        <p style="color: #ccc; max-width: 600px;">
+            Lê Thắng Media cung cấp hệ sinh thái dịch vụ mạng xã hội toàn diện – từ khôi phục tài khoản, report, tích xanh, code tool, đến bảo mật và tracking.
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🔑 Khôi Phục Tài Khoản</h3>
+                <p>Khôi phục các tài khoản bị hack, mất 2FA. Hỗ trợ Facebook, Instagram, TikTok.</p>
+            </div>
+            <div class="service-card">
+                <h3>🚫 Report & Xóa Tài Khoản</h3>
+                <p>Hỗ trợ report, gỡ bỏ nội dung vi phạm, bảo vệ thương hiệu.</p>
+            </div>
+            <div class="service-card">
+                <h3>✅ Dịch Vụ Tích Xanh</h3>
+                <p>Tích xanh Facebook/Instagram theo tên, avatar, tăng độ uy tín.</p>
+            </div>
+            <div class="service-card">
+                <h3>🤖 Code Tool & Bot</h3>
+                <p>Custom tool auto, bot Python/JS, scrape data, check live acc.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <button class="btn-cta">Nhận Tư Vấn Ngay</button>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h2>999+</h2>
+                <p>TÀI KHOẢN ĐÃ CỨU</p>
+            </div>
+            <div class="stat-box">
+                <h2>95%</h2>
+                <p>THÀNH CÔNG</p>
+            </div>
+            <div class="stat-box">
+                <h2>4+</h2>
+                <p>NĂM KINH NGHIỆM</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Code chạy hiệu ứng Loading
+        let progress = 0;
+        const bar = document.getElementById('progress-bar');
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
+
+        const interval = setInterval(() => {
+            progress += Math.floor(Math.random() * 10) + 1; // Tăng từ 1-10 mỗi lần
+            if (progress >= 100) {
+                progress = 100;
+                clearInterval(interval);
+                // Ẩn loading, hiện nội dung chính
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 300);
+            }
+            bar.style.width = progress + '%';
+        }, 150);
+    </script>
+</body>
+</html>
